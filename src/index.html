@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distributed Identity System</title>
+
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: #555555;
+		opacity: 0.9;
+		color: white;
+      }
+
+      main {
+        margin-top: 60px;
+      }
+
+      #content {
+        display: none;
+      }
+
+      form {
+        width: 350px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        margin-bottom: 0px;
+      }
+	  
+	  navi {
+		background-color: red;
+	  }
+	  
+	  .docNav {
+		overflow: hidden;
+		position: fixed;
+		top: 55%;
+		left: 55%;
+		-webkit-transform: translate(-80%, -80%);
+		transform: translate(-80%, -80%);
+	   }
+	   
+	   .docLinks {
+		font-size: 350%;
+		}
+		
+		.docLinks:hover {
+		}
+		
+		#accHeader {
+			position: relative;		
+			left: 26%;
+			color: white;
+			font-size: 120%;
+		}
+
+     
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" style="color: #fff;" target="_blank">Distributed Identity System</a>
+      <h1 id = "accHeader">Account Address: </h1>
+	  <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
+          <small><a class="nav-link" href="#"><span id="account"></span></a></small>
+        </li>
+      </ul>
+    </nav>
+	
+	
+	<div class="docNav">
+		<div class ="docLinks">
+		  <a href="NewDocument.html">Add New Document</a> <br/>
+		  <a href="ExistingDocuments.html">Display Existing Documents</a> <br/>
+		</div>
+	</div>
+	
+	
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

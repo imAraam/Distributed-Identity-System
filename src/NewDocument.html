@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distributed Identity System</title>
+
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: #555555;
+		opacity: 0.9;
+		color: white;
+      }
+	  
+      main {
+        margin-top: 60px;
+      }
+
+      #content {
+        display: none;
+      }
+
+      form {
+        width: 350px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        margin-bottom: 0px;
+      }
+	  
+	  #accHeader {
+			position: relative;		
+			left: 26%;
+			color: white;
+			font-size: 120%;
+		}
+		
+	  .errorCont {
+		position: relative;
+		left: 40%;
+		display: none;
+	  }
+
+	  .errorP {
+		color: #fff;
+		text-align: justify;
+		font-weight: 900;
+		text-shadow: 1px white;
+	  }
+	  
+	  #tryAgainBtn {
+		background-color: #fff;
+		border: 3px solid #DC143C;
+		color: #DC143C;
+	  }
+	  
+	  #tryAgainBtn:hover {
+		background-color: #DC143C;
+		color: #fff;
+	  }
+	
+
+     
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" style="color: #fff;" target="_blank">Add Document</a>
+      <h1 id = "accHeader">Account Address: </h1>
+	  <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
+          <small><a class="nav-link" href="index.html"><span id="account"></span></a></small>
+        </li>
+      </ul>
+    </nav>
+	
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" class="col-lg-12 d-flex justify-content-center">
+          <div id="loader" class="text-center">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content">
+            <form onSubmit="App.createDoc(); return false;">
+			  <input type="radio" id="passport" name="documentType" value="Passport" required>
+			  <label for="passport">Passport</label><br>
+			  <input type="radio" id="license" name="documentType" value="License" required>
+			  <label for="license">Driving License</label><br>
+			  
+			  
+			  <label for="newDoc1">First Name:</label><br>
+              <input id="newDoc1" type="text" class="form-control" placeholder="First Name" required>          
+			  <label for="newDoc2">Surname:</label><br>
+              <input id="newDoc2" type="text" class="form-control" placeholder="Surname" required>
+			  <label for="newDoc3">Date of Birth:</label><br>
+              <input id="newDoc3" type="date" class="form-control" placeholder="Date of Birth" required>          
+			  <label for="newDoc4">Document ID Number:</label><br>
+              <input id="newDoc4" type="text" class="form-control" placeholder="Document ID Number" required>
+			  <label for="newDoc5">Issue Date:</label><br>
+              <input id="newDoc5" type="date" class="form-control" placeholder="Issue Date" required> 
+			  <label for="newDoc6">Expiry Date:</label><br>
+              <input id="newDoc6" type="date" class="form-control" placeholder="Expiry Date" required> 
+			  <label for="newDoc7">Issuing Authority:</label><br>
+              <input id="newDoc7" type="text" class="form-control" placeholder="Issuing Authority" required> 
+              </br>
+			  <input type="submit" value="Add Document">
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+	
+	<div class="errorCont">
+		<p class="errorP"> That document already exists!</p>
+		<input type="submit" id = "tryAgainBtn" class = "btn btn-primary btn-lg" value="Try Again" onclick="window.location.href='NewDocument.html'">
+	</div>
+	
+	
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
