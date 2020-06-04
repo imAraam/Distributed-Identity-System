@@ -25,3 +25,8 @@ src contains the client-side code
 "package.json" project dependencies such as truffle specific development dependencies, bootstrap, server to run project which allow for the easy installation using 'npm install'
 
 "bs-config.json" to inform the lite-server where all the files are located
+
+
+# System usage instructions
+
+To begin using the application there are some steps which must be performed in order for the application to function properly. The first step is to navigate to the Ganache folder and either manually run Ganache, or through command line console enter “npm start”. The next step is to navigate to the contracts directory in the command line console, and enter the command “truffle compile” followed by “truffle migrate –reset” to deploy the smart contracts to the blockchain and remove past deployed contracts. The final step is to run the command “npm run dev” which runs the lite server for the web application to run. Which is a server that provides live reloading from the JavaScript Node Package Manager.  Post command execution, the web application will be launched locally allowing the user to interact with its functionality. 
